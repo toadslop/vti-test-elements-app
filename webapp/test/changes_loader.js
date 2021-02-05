@@ -26,7 +26,6 @@ sap.ui.define(['sap/base/util/merge', connectorPath], function(merge, FileListBa
                     cache: false
                 })
                     .then(function(sChangesFolderContent) {
-                        debugger;
                         var regex = /(\/changes\/[^"]*\.change)/g;
                         var result = regex.exec(sChangesFolderContent);
                         var aChanges = [];
@@ -37,7 +36,6 @@ sap.ui.define(['sap/base/util/merge', connectorPath], function(merge, FileListBa
                         resolve(aChanges);
                     })
                     .fail(function(obj) {
-                        debugger;
                         // No changes folder, then just resolve
                         resolve();
                     });

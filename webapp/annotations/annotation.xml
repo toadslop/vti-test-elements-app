@@ -1,18 +1,89 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
-        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
-    </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/sap/ZELEMENT_TEST_SRV/$metadata">
         <edmx:Include Namespace="ZELEMENT_TEST_SRV"/>
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="ztestproject01">
+            <Annotations Target="ZELEMENT_TEST_SRV.ekko">
+                <Annotation Term="UI.LineItem">
+                    <Collection>                       
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Ebeln"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Bukrs"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Bsakz"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Bsart"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Loekz"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Statu"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record></Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="PO header"/>
+                        <PropertyValue Property="TypeNamePlural" String="PO hd"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Ebeln"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="Line items for PO"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="TypeImageUrl" String="REPLACE_WITH_TYPEIMAGE_PATH"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets"  >
+                    <Collection >
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#header"/>
+                         </Record>
+                    </Collection>
+                </Annotation >
+                <Annotation Term="UI.FieldGroup" Qualifier="header" >
+                    <Record >
+                        <PropertyValue Property="Data" >
+                            <Collection >
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Ebeln" ></PropertyValue>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Bukrs" ></PropertyValue>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
+                                </Record>
+                                 <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Statu" ></PropertyValue>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
+                                </Record>      
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Bsakz" ></PropertyValue>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
+                                </Record>                         
+                            </Collection>   
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

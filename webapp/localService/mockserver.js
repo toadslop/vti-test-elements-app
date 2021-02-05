@@ -13,7 +13,6 @@ sap.ui.define(['sap/ui/core/util/MockServer'], function(MockServer) {
          */
 
         init: function() {
-            debugger;
             var oUriParameters = jQuery.sap.getUriParameters(),
                 sJsonFilesUrl = jQuery.sap.getModulePath(_sJsonFilesModulePath),
                 sManifestUrl = jQuery.sap.getModulePath(_sAppModulePath + 'manifest', '.json'),
