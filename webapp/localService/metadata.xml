@@ -1,125 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
-
-
--<edmx:DataServices m:DataServiceVersion="2.0">
-
-
--<Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZELEMENT_TEST_SRV">
-
-
--<EntityType sap:content-version="1" Name="ekko">
-
-
--<Key>
-
-<PropertyRef Name="Ebeln"/>
-
-</Key>
-
-<Property Name="Ebeln" sap:updatable="false" sap:label="Purchasing Doc." sap:unicode="false" MaxLength="10" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Loekz" sap:label="deletion ind." sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Bukrs" sap:label="Company Code" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Statu" sap:label="Status" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Bstyp" sap:label="Doc. Category" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Bsart" sap:label="Document Type" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Bsakz" sap:label="Control" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
-
-<NavigationProperty Name="to_ekpo" ToRole="ToRole_EKKO_TO_EKPO" FromRole="FromRole_EKKO_TO_EKPO" Relationship="ZELEMENT_TEST_SRV.EKKO_TO_EKPO"/>
-
-</EntityType>
-
-
--<EntityType sap:content-version="1" Name="ekpo">
-
-
--<Key>
-
-<PropertyRef Name="Ebeln"/>
-
-<PropertyRef Name="Ebelp"/>
-
-</Key>
-
-<Property Name="Ebeln" sap:updatable="false" sap:label="Purchasing Doc." sap:unicode="false" MaxLength="10" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Ebelp" sap:updatable="false" sap:label="Item" sap:unicode="false" MaxLength="5" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Matnr" sap:label="Material" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Ematn" sap:label="Material" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Werks" sap:label="Plant" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Lgort" sap:label="Stor. Loc." sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
-
-<Property Name="Menge" sap:label="PO Quantity" sap:unicode="false" Nullable="false" Type="Edm.Decimal" sap:unit="Meins" Scale="3" Precision="13"/>
-
-<Property Name="Meins" sap:label="Order Unit" sap:unicode="false" MaxLength="3" Nullable="false" Type="Edm.String" sap:semantics="unit-of-measure"/>
-
-<NavigationProperty Name="ekko" ToRole="FromRole_EKKO_TO_EKPO" FromRole="ToRole_EKKO_TO_EKPO" Relationship="ZELEMENT_TEST_SRV.EKKO_TO_EKPO"/>
-
-</EntityType>
-
-
--<Association sap:content-version="1" Name="EKKO_TO_EKPO">
-
-<End Type="ZELEMENT_TEST_SRV.ekko" Role="FromRole_EKKO_TO_EKPO" Multiplicity="1"/>
-
-<End Type="ZELEMENT_TEST_SRV.ekpo" Role="ToRole_EKKO_TO_EKPO" Multiplicity="*"/>
-
-
--<ReferentialConstraint>
-
-
--<Principal Role="FromRole_EKKO_TO_EKPO">
-
-<PropertyRef Name="Ebeln"/>
-
-</Principal>
-
-
--<Dependent Role="ToRole_EKKO_TO_EKPO">
-
-<PropertyRef Name="Ebeln"/>
-
-</Dependent>
-
-</ReferentialConstraint>
-
-</Association>
-
-
--<EntityContainer Name="ZELEMENT_TEST_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
-
-<EntitySet sap:content-version="1" Name="ekkoSet" sap:searchable="true" EntityType="ZELEMENT_TEST_SRV.ekko"/>
-
-<EntitySet sap:content-version="1" Name="ekpoSet" sap:searchable="true" EntityType="ZELEMENT_TEST_SRV.ekpo"/>
-
-
--<AssociationSet sap:content-version="1" Name="EKKO_TO_EKPOSet" sap:updatable="false" sap:deletable="false" sap:creatable="false" Association="ZELEMENT_TEST_SRV.EKKO_TO_EKPO">
-
-<End Role="FromRole_EKKO_TO_EKPO" EntitySet="ekkoSet"/>
-
-<End Role="ToRole_EKKO_TO_EKPO" EntitySet="ekpoSet"/>
-
-</AssociationSet>
-
-</EntityContainer>
-
-<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcals4hci.dummy.nodomain:50000/sap/opu/odata/SAP/ZELEMENT_TEST_SRV/$metadata" rel="self"/>
-
-<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcals4hci.dummy.nodomain:50000/sap/opu/odata/SAP/ZELEMENT_TEST_SRV/$metadata" rel="latest-version"/>
-
-</Schema>
-
-</edmx:DataServices>
-
+-
+    <edmx:DataServices m:DataServiceVersion="2.0">
+-
+        <Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZELEMENT_TEST_SRV">
+-
+            <EntityType sap:content-version="1" Name="ekko">
+-
+                <Key>
+                    <PropertyRef Name="Ebeln"/>
+                </Key>
+                <Property Name="Ebeln" sap:updatable="false" sap:label="Purchasing Doc." sap:unicode="false" MaxLength="10" Nullable="false" Type="Edm.String"/>
+                <Property Name="Loekz" sap:label="deletion ind." sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
+                <Property Name="Bukrs" sap:label="Company Code" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+                <Property Name="Statu" sap:label="Status" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
+                <Property Name="Bstyp" sap:label="Doc. Category" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
+                <Property Name="Bsart" sap:label="Document Type" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+                <Property Name="Bsakz" sap:label="Control" sap:unicode="false" MaxLength="1" Nullable="false" Type="Edm.String"/>
+                <NavigationProperty Name="to_ekpo" ToRole="ToRole_EKKO_TO_EKPO" FromRole="FromRole_EKKO_TO_EKPO" Relationship="ZELEMENT_TEST_SRV.EKKO_TO_EKPO"/>
+            </EntityType>
+-
+            <EntityType sap:content-version="1" Name="ekpo">
+-
+                <Key>
+                    <PropertyRef Name="Ebeln"/>
+                    <PropertyRef Name="Ebelp"/>
+                </Key>
+                <Property Name="Ebeln" sap:updatable="false" sap:label="Purchasing Doc." sap:unicode="false" MaxLength="10" Nullable="false" Type="Edm.String"/>
+                <Property Name="Ebelp" sap:updatable="false" sap:label="Item" sap:unicode="false" MaxLength="5" Nullable="false" Type="Edm.String"/>
+                <Property Name="Matnr" sap:label="Material" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
+                <Property Name="Ematn" sap:label="Material" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
+                <Property Name="Werks" sap:label="Plant" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+                <Property Name="Lgort" sap:label="Stor. Loc." sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+                <Property Name="Menge" sap:label="PO Quantity" sap:unicode="false" Nullable="false" Type="Edm.Decimal" sap:unit="Meins" Scale="3" Precision="13"/>
+                <Property Name="Meins" sap:label="Order Unit" sap:unicode="false" MaxLength="3" Nullable="false" Type="Edm.String" sap:semantics="unit-of-measure"/>
+                <NavigationProperty Name="ekko" ToRole="FromRole_EKKO_TO_EKPO" FromRole="ToRole_EKKO_TO_EKPO" Relationship="ZELEMENT_TEST_SRV.EKKO_TO_EKPO"/>
+            </EntityType>
+-
+            <Association sap:content-version="1" Name="EKKO_TO_EKPO">
+                <End Type="ZELEMENT_TEST_SRV.ekko" Role="FromRole_EKKO_TO_EKPO" Multiplicity="1"/>
+                <End Type="ZELEMENT_TEST_SRV.ekpo" Role="ToRole_EKKO_TO_EKPO" Multiplicity="*"/>
+-
+                <ReferentialConstraint>
+-
+                    <Principal Role="FromRole_EKKO_TO_EKPO">
+                        <PropertyRef Name="Ebeln"/>
+                    </Principal>
+-
+                    <Dependent Role="ToRole_EKKO_TO_EKPO">
+                        <PropertyRef Name="Ebeln"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+-
+            <EntityContainer Name="ZELEMENT_TEST_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+                <EntitySet sap:content-version="1" Name="ekkoSet" sap:searchable="true" EntityType="ZELEMENT_TEST_SRV.ekko"/>
+                <EntitySet sap:content-version="1" Name="ekpoSet" sap:searchable="true" EntityType="ZELEMENT_TEST_SRV.ekpo"/>
+-
+                <AssociationSet sap:content-version="1" Name="EKKO_TO_EKPOSet" sap:updatable="false" sap:deletable="false" sap:creatable="false" Association="ZELEMENT_TEST_SRV.EKKO_TO_EKPO">
+                    <End Role="FromRole_EKKO_TO_EKPO" EntitySet="ekkoSet"/>
+                    <End Role="ToRole_EKKO_TO_EKPO" EntitySet="ekpoSet"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcals4hci.dummy.nodomain:50000/sap/opu/odata/SAP/ZELEMENT_TEST_SRV/$metadata" rel="self"/>
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://vhcals4hci.dummy.nodomain:50000/sap/opu/odata/SAP/ZELEMENT_TEST_SRV/$metadata" rel="latest-version"/>
+        </Schema>
+    </edmx:DataServices>
 </edmx:Edmx>
