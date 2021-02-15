@@ -9,7 +9,7 @@
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="ztestproject01">
             <Annotations Target="ZELEMENT_TEST_SRV.ekko">
                 <Annotation Term="UI.LineItem">
-                    <Collection>                       
+                    <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Ebeln"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
@@ -57,7 +57,7 @@
                     <Collection >
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#header"/>
-                         </Record>
+                        </Record>
                     </Collection>
                 </Annotation >
                 <Annotation Term="UI.FieldGroup" Qualifier="header" >
@@ -72,62 +72,57 @@
                                     <PropertyValue Property="Value" Path="Bukrs" ></PropertyValue>
                                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
                                 </Record>
-                                 <Record Type="UI.DataField">
+                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="Statu" ></PropertyValue>
                                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
-                                </Record>      
+                                </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="Bsakz" ></PropertyValue>
                                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" ></Annotation>
-                                </Record>                         
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.Facets">
-                    <Collection >
-                        <Record Type="UI.ReferenceFacet" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_ekpo/@UI.LineItem" ></PropertyValue>
-                            <PropertyValue Property="Label" String="Line Items" ></PropertyValue>
+                            <PropertyValue Property="Label" String="Line Items" ></PropertyValue >
                         </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
             <Annotations Target="ZELEMENT_TEST_SRV.ekpo" >
                 <Annotation Term="UI.LineItem" >
-                    <Collection>                       
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Ebelp"></PropertyValue>
-                            <PropertyValue Property="Label" String="NUMBER" ></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                    <Collection>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Ebeln" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Matnr"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Ebelp" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Ematn"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Matnr" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Werks"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Ematn" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Lgort"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Werks" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Menge"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Lgort" ></PropertyValue>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Meins"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Menge" ></PropertyValue>
+                        </Record>
+                        <Record Type="UI.DataField" >
+                            <PropertyValue Property="Value" Path="Meins" ></PropertyValue>
                         </Record>
                     </Collection>
                 </Annotation>
-            </Annotations >
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
