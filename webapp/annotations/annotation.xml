@@ -93,7 +93,7 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            <Annotations Target="ZELEMENT_TEST_SRV.ekpo">
+            <!-- <Annotations Target="ZELEMENT_TEST_SRV.ekpo">
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
@@ -125,42 +125,42 @@
                         </Record>
                     </Collection>
                 </Annotation>
-            </Annotations>
-            <Annotations Target="ZELEMENT_TEST_SRV.ekpo" >
-                <Annotation Term="UI.LineItem" >
-                    <Collection>                       
+            </Annotations> -->
+            <Annotations Target="ZELEMENT_TEST_SRV.ekpo">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Ebelp"></PropertyValue>
-                            <PropertyValue Property="Label" String="NUMBER" ></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Ebelp" />
+                            <PropertyValue Property="Label" String="NUMBER" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Matnr"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Matnr" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Ematn"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Ematn" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Werks"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Werks" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Lgort"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Lgort" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Menge"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Menge" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Meins"></PropertyValue>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <PropertyValue Property="Value" Path="Meins" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
                         </Record>
                     </Collection>
                 </Annotation>
-            </Annotations >
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
