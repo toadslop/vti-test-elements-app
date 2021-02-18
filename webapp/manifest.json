@@ -18,7 +18,9 @@
         "uri": "/sap/opu/odata/sap/ZELEMENT_TEST_SRV/",
         "type": "OData",
         "settings": {
-          "annotations": ["annotation"],
+          "annotations": [
+            "annotation"
+          ],
           "localUri": "localService/metadata.xml"
         }
       },
@@ -51,7 +53,11 @@
       "tablet": true,
       "phone": true
     },
-    "supportedThemes": ["sap_hcb", "sap_belize", "sap_fiori_3"]
+    "supportedThemes": [
+      "sap_hcb",
+      "sap_belize",
+      "sap_fiori_3"
+    ]
   },
   "sap.ui5": {
     "resources": {
@@ -90,12 +96,10 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "uri": "i18n/ObjectPage/ekkoSet/i18n.properties"
       },
-
       "i18n|sap.suite.ui.generic.template.ObjectPage|ekpoSet": {
         "type": "sap.ui.model.resource.ResourceModel",
         "uri": "i18n/ObjectPage/ekpoSet/i18n.properties"
       },
-
       "": {
         "dataSource": "mainService",
         "preload": true,
@@ -135,6 +139,33 @@
             "condensedTableLayout": true,
             "smartVariantManagement": true,
             "enableTableFilterInPageVariant": true,
+            "tableSettings": {
+              "createWithParameterDialog": {
+                "fields": {
+                  "Ebeln": {
+                    "path": "Ebeln"
+                  },
+                  "Loekz": {
+                    "path": "Loekz"
+                  },
+                  "Bukrs": {
+                    "path": "Bukrs"
+                  },
+                  "Statu": {
+                    "path": "Statu"
+                  },
+                  "Bstyp": {
+                    "path": "Bstyp"
+                  },
+                  "Bsart": {
+                    "path": "Bsart"
+                  },
+                  "Bsakz": {
+                    "path": "Bsakz"
+                  }
+                }
+              }
+            },
             "filterSettings": {
               "dateSettings": {
                 "useDateRange": true
@@ -147,7 +178,47 @@
             "entitySet": "ekkoSet",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
-              "name": "sap.suite.ui.generic.template.ObjectPage"
+              "name": "sap.suite.ui.generic.template.ObjectPage",
+              "list": true,
+              "settings": {
+                "editableHeaderContent": true,
+                "sections": {
+                  "ekpoSet :: com.sap.vocabularies.UI.v1.LineItem": {
+                    "navigationProperty": "to_ekpo",
+                    "entitySet": "ekpoSet",
+                    "tableSettings": {
+                      "createWithParameterDialog": {
+                        "fields": {
+                          "Ebeln": {
+                            "path": "Ebeln"
+                          },
+                          "Ebelp": {
+                            "path": "Ebelp"
+                          },
+                          "Matnr": {
+                            "path": "Matnr"
+                          },
+                          "Ematn": {
+                            "path": "Ematn"
+                          },
+                          "Werks": {
+                            "path": "Werks"
+                          },
+                          "Lgort": {
+                            "path": "Lgort"
+                          },
+                          "Menge": {
+                            "path": "Menge"
+                          },
+                          "Meins": {
+                            "path": "Meins"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             "pages": {
               "ObjectPage|ekpo": {
